@@ -7,9 +7,9 @@ let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
-let aviableQuestions = []
+let avialableQuestions = []
 
-let questoins = [
+let questions = [
     {
         question: 'What is 2 + 2?',
         choice1: '2',
@@ -50,21 +50,21 @@ const MAX_QUESTIONS = 4
 startGame = () => {
     questionCounter = 0
     score = 0
-    aviableQuestions = [...questions]
+    avialableQuestions = [...questions]
     getNewQuestion()
 }
 
 getNewQuestion = () => {
-    if (aviableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+    if (avialableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('/end.html')
     }
 
-    questionCounter++
+    // questionCounter++
 
-    const questionsIndex = Math.floor(Math.random() * aviableQuestions.length)
-    currentQuestion = aviableQuestions[questionsIndex]
+    const questionsIndex = Math.floor(Math.random() * avialableQuestions.length)
+    currentQuestion = avialableQuestions[questionsIndex]
     question.innterText = currentQuestion.question
 
     choices.forEach(choice => {
@@ -72,7 +72,7 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion['choice' + number]
     })
 
-    availableQuestoins.splice(questionsIndex, 1)
+    avialableQuestions.splice(questionsIndex, 1)
 
     acceptingAnswers = true
 }
@@ -92,11 +92,18 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS)
         }
 
-        selectedChoice.parentElement.classlist.add(classToApply)
+        selectedChoice.parentElement.classList.add(classToApply)
 
         setTimeout(() => {
-            selectedChoice.parentElement.classlist.remove(classToApply)
+            selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
         }, 1000)
     })
 })
+
+incrementScore = num => {
+    score +=num
+    scoreText.innerText = score
+}
+
+startGame()
