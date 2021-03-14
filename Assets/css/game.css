@@ -1,0 +1,70 @@
+body {
+    color:lightcoral;
+    background-color: lightblue;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background-color: black;
+    font-size: 25px;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100px;
+}
+
+.correct {
+    background: blue;
+}
+
+.incorrect {
+    background: blue;
+}
+
+
+#question {
+    text-align: center;
+    font-size: 50px;
+}
+
+#hud {
+    display: flex;
+    justify-content: center;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-text {
+    text-align: center;
+}
+
+.hud-item {
+    text-align: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}
