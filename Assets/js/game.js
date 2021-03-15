@@ -11,36 +11,36 @@ let avialableQuestions = []
 
 let questions = [
     {
-        question: 'What is 2 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '8',
-        choice4: '21',
+        question: 'What is the sytax to create a button?',
+        choice1: 'promt',
+        choice2: 'var',
+        choice3: 'btn',
+        choice4: 'getElementbyId',
+        answer: 3,
+    },
+    {
+        question: 'What do you do when your code wont work?',
+        choice1: 'Scream',
+        choice2: 'Check the console log',
+        choice3: 'Run around in circles',
+        choice4: 'Wait for it to fix itself',
         answer: 2,
     },
     {
-        question: 'What is 3 + 3?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '6',
-        choice4: '21',
+        question: 'How do you append something to a webpage?',
+        choice1: '#ID',
+        choice2: '#Class',
+        choice3: '.Append',
+        choice4: '.Array',
         answer: 3,
     },
     {
-        question: 'What is 1 + 1?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '8',
-        choice4: '21',
+        question: 'Do you love coding?',
+        choice1: 'YES!!',
+        choice2: 'Only Sometimes',
+        choice3: 'No',
+        choice4: 'I dont even code',
         answer: 1,
-    },
-    {
-        question: 'What is 4 + 4?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '8',
-        choice4: '21',
-        answer: 3,
     },
 ]
 
@@ -58,14 +58,14 @@ getNewQuestion = () => {
     if (avialableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/end.html')
+        return window.location.assign('\end.html')
     }
 
     // questionCounter++
 
     const questionsIndex = Math.floor(Math.random() * avialableQuestions.length)
     currentQuestion = avialableQuestions[questionsIndex]
-    question.innterText = currentQuestion.question
+    question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
         const number = choice.dataset['number']

@@ -5,6 +5,7 @@ body {
 
 .choice-container {
     display: flex;
+    justify-content: center;
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 4px;
@@ -31,11 +32,11 @@ body {
 }
 
 .correct {
-    background: blue;
+    background: green;
 }
 
 .incorrect {
-    background: blue;
+    background: red;
 }
 
 
