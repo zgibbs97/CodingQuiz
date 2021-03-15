@@ -8,9 +8,9 @@
 
 # When the user completes the quiz, they can submit their highscore for later
 
-![Screenshot](\Assets\img\Screenshot[1].png)
-![Screenshot](\Assets\img\Screenshot[1].png)
-![Screenshot](\Assets\img\Screenshot[1].png)
+![Screenshot](\Assets\img\Screenshot[3].png)
+![Screenshot](\Assets\img\Screenshot[2].png)
+![Screenshot](./Assets/img/Screenshot[1].png)
 
 
 
